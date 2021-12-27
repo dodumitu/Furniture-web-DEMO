@@ -1,128 +1,16 @@
-// modal
-<div class="modal-body">
-  <div class="cartHeader cart-row">
-    <span class="cart-item cart-header cart-column">Sản Phẩm</span>
-    <span class="cart-price cart-header cart-column">Giá</span>
-    <span class="cart-quantity cart-header cart-column">Số Lượng</span>
-  </div>
-
-  <div class="cart-items">
-    <div class="cart-row">
-      
-      <div class="cart-item cart-column">
-        <img class="cart-item-image" src="https://bizweb.dktcdn.net/thumb/large/100/228/168/products/sualai.jpg?v=1573720306000" width="100" height="100"/>
-        <span class="cart-item-title">Mũi Hàn 500</span>
-      </div>
-      <span class="cart-price cart-column">25000đ</span>
-      
-      <div class="cart-quantity cart-column">
-        <input class="cart-quantity-input" type="number" value="1" />
-        <button class="btn btn-danger" type="button">Xóa</button>
-      </div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="test.css">
+</head>
+<body>
+    <div id="app">
+        <div class="products"></div>
     </div>
-
-    <div class="cart-total">
-      <strong class="cart-total-title">Tổng Cộng:</strong>
-      <span class="cart-total-price">3223000VNĐ</span>
-    </div>
-  </div>
-</div>
-
-
-
-/* cart */
-.cart-header {
-  font-weight: bold;
-  font-size: 1.25em;
-  color: #333;
-}
-
-.cart-column {
-  display: flex;
-  align-items: center;
-  border-bottom: 1px solid black;
-  margin-right: 1.5em;
-  padding-bottom: 10px;
-  margin-top: 10px;
-}
-
-.cart-row {
-  display: flex;
-}
-
-.cart-item {
-  width: 45%;
-}
-
-.cart-price {
-  width: 20%;
-  font-size: 1.2em;
-  color: #333;
-}
-
-.cart-quantity {
-  width: 35%;
-}
-
-.cart-item-title {
-  color: #333;
-  margin-left: .5em;
-  font-size: 1.2em;
-}
-
-.cart-item-image {
-  width: 75px;
-  height: auto;
-  border-radius: 10px;
-}
-
-.btn-danger {
-  color: white;
-  background-color: #EB5757;
-  border: none;
-  border-radius: .3em;
-  font-weight: bold;
-}
-
-.btn-danger:hover {
-  background-color: #CC4C4C;
-}
-
-.cart-quantity-input {
-  height: 34px;
-  width: 50px;
-  border-radius: 5px;
-  border: 1px solid #56CCF2;
-  background-color: #eee;
-  color: #333;
-  padding: 0;
-  text-align: center;
-  font-size: 1.2em;
-  margin-right: 25px;
-}
-
-.cart-row:last-child {
-  border-bottom: 1px solid black;
-}
-
-.cart-row:last-child .cart-column {
-  border: none;
-}
-
-.cart-total {
-  text-align: end;
-  margin-top: 10px;
-  margin-right: 10px;
-}
-
-.cart-total-title {
-  font-weight: bold;
-  font-size: 1.5em;
-  color: black;
-  margin-right: 20px;
-}
-
-.cart-total-price {
-  color: #333;
-  font-size: 1.1em;
-}
+    <script src="./components/CartModal.js" type="module"></script>
+</body>
+</html>

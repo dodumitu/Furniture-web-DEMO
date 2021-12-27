@@ -11,20 +11,20 @@ export default class Room {
   
       this.$img = document.createElement("img");
       this.$img.src = img;
-      this.$img.setAttribute("class", "w-60 h-60 object-cover hover:scale-110 duration-300");
+      this.$img.setAttribute("class", "product-img w-60 h-60 object-cover hover:scale-110 duration-300");
   
       this.$price = document.createElement("p");
       this.$price.textContent = price;
-      this.$price.setAttribute("class", "text-red-600 font-bold");
+      this.$price.setAttribute("class", "product-price text-red-600 font-bold");
   
       this.$name = document.createElement("p");
       this.$name.textContent = name;
-      this.$name.setAttribute("class", " font-normal mt-4 text-xl");
+      this.$name.setAttribute("class", "product-name font-normal mt-4 text-xl");
   
       this.$btn = document.createElement("button");
       this.$btn.type = "button";
       this.$btn.textContent = "Mua hàng";
-      this.$btn.setAttribute("class", "bg-red-700 hover:shadow-lg text-white font-bold mt-5 py-1 px-3 rounded");
+      this.$btn.setAttribute("class", "button add-to-cart bg-red-700 hover:shadow-lg text-white font-bold mt-5 py-1 px-3 rounded");
       this.$btn.addEventListener('click', this.addToCart)
     }
 

@@ -1,110 +1,217 @@
-// import Room from "./components/Room.js";
+
+
 export default class CartModal {
-  $cartModal;
-
-  $cartHeader;
-  $item;
-  $price;
-  $quantity;
-
-  $cartItems;
-  $cartItemRow;
-  $cartItemCol;
-  $itemImg;
-  $itemTitle;
-  $itemPrice;
-
-  $cartQuantityCol;
-  $cartQuantityInput;
-  $delItemBtn;
-
-  $cartTotal;
-  $cartTotalTitle;
-  $cartTotalPrice;
+  $cartContainer;
+  $cartHead;
+  $productQuantity;
+  $cartList;
+  $cartBtn;
+  $emptyCartBtn;
+  $checkoutBtn;
+  $totalPrice;
 
   constructor() {
-    this.$cartModal = document.createElement("div");
-    this.$cartModal.setAttribute("class", "modal-body p-4 ");
+    this.$cartContainer = document.createElement("div");
+    this.$cartContainer.setAttribute("class", " shopping-cart ");
 
-    this.$cartHeader = document.createElement("div");
-    this.$cartHeader.setAttribute("class", "cart-row flex ");
+    this.$cartHead = document.createElement("div");
+    this.$cartHead.setAttribute("class", "shopping-cart-head");
 
-    this.$item = document.createElement("span");
-    this.$item.textContent = "Sản phẩm";
-    this.$item.setAttribute("class", "w-2/5");
+    // this.$productQuantity = document.createElement("span");
+    // this.$productQuantity.textContent = "0";
 
-    this.$price = document.createElement("span");
-    this.$price.textContent = "Gía";
-    this.$price.setAttribute("class", "w-1/5");
+    this.$cartHead.innerHTML =
+    "<img src='https://pngimg.com/uploads/shopping_cart/shopping_cart_PNG4.png' alt='yourimgtext' width='30' height='30' />";
+  this.$cartHead.setAttribute = ("class", "w-4 h-4 hover:scale-110 duration-300 ");
 
-    this.$quantity = document.createElement("span");
-    this.$quantity.textContent = "Số lượng";
-    this.$quantity.setAttribute("class", "w-1/3");
+    this.$cartList = document.createElement("ul");
+    this.$cartList.setAttribute("class", "shopping-cart-list");
 
-    this.$cartItems = document.createElement('div');
-    this.$cartItems.setAttribute('class', "cart-item w-2/5 ")
-    this.$cartItemRow = document.createElement('div');
-    this.$cartItemRow.setAttribute('class', "cart-row flex")
-    this.$cartItemCol = document.createElement('div');
-    this.$cartItemCol.setAttribute('class',"cart-column flex items-center bt-1 border-solid mr-4 pb-10 mt-10")
-    this.$itemImg = document.createElement('img');
-    this.$itemImg.src = "https://nt11.mediawz.com/san-pham/ban-khach-chung-cu/"
-    this.$itemImg.setAttribute('class', " w-{75px} h-auto rounded-m")
-    this.$itemTitle = document.createElement('span')
-    this.$itemTitle.setAttribute('class', "ml-4 ")
-    this.$itemTitle.textContent = "#name"
-    this.$itemPrice= document.createElement('span')
-    this.$itemPrice.setAttribute('class', "w-1/5 ")
-    this.$itemPrice.textContent = '#000đ'
+    this.$cartBtn = document.createElement("div");
+    this.$cartBtn.setAttribute("class", "cart-buttons");
 
-    this.$cartQuantityCol = document.createElement('div');
-    this.$cartQuantityCol.setAttribute('class', "cart-column flex items-center bt-1 border-solid mr-4 pb-10 mt-10")
-    this.$cartQuantityInput = document.createElement('input');
-    this.$cartQuantityInput.setAttribute('class', '');
-    this.$delItemBtn = document.createElement('button');
-    this.$delItemBtn.type = "button";
-    this.$delItemBtn.textContent = "Xoá";
-    this.$delItemBtn.setAttribute('class',"cursor-pointer p-2 rounded-xl");
+    this.$emptyCartBtn = document.createElement("a");
+    this.$emptyCartBtn.textContent = "Huỷ order";
+    this.$emptyCartBtn.setAttribute("class", "button empty-cart-btn ");
 
-    this.$cartTotal = document.createElement('div');
-    this.$cartTotal.setAttribute('class',"text-end mt-10 mr-10")
-    this.$cartTotalTitle = document.createElement('strong');
-    this.$cartTotalTitle.textContent = "Tổng cộng"
-    this.$cartTotalTitle.setAttribute('class',"font-bold mr-20")
-    this.$cartTotalPrice = document.createElement('span');
-    this.$cartTotalPrice.textContent= '#000đ'
-    this.$cartTotalPrice.setAttribute('class','')
+    this.$checkoutBtn = document.createElement("a");
+    this.$totalPrice = document.createElement("span");
+    this.$totalPrice.textContent = "0đ";
+    this.$totalPrice.setAttribute("class", "total-price");
+    this.$checkoutBtn.textContent =
+      "Thanh toán- " + this.$totalPrice.textContent;
+    this.$checkoutBtn.setAttribute("class", "button cart-checkout");
   }
-  render(){
-    this.$cartHeader.appendChild(this.$item)
-    this.$cartHeader.appendChild(this.$price)
-    this.$cartHeader.appendChild(this.$quantity)
+  openModal() {
+    this.$cartContainer.classList.toggle("hidden");
+  }
 
-    this.$cartItemCol.appendChild(this.$itemImg)
-    this.$cartItemCol.appendChild(this.$itemTitle)
-    this.$cartItemCol.appendChild(this.$itemPrice)
+  render() {
+    // this.$cartHead.appendChild(this.$productQuantity);
 
-    this.$cartQuantityCol.appendChild(this.$cartQuantityInput)
-    this.$cartQuantityCol.appendChild(this.$delItemBtn)
+    this.$cartBtn.appendChild(this.$emptyCartBtn);
+    this.$cartBtn.appendChild(this.$checkoutBtn);
 
-    this.$cartTotal.appendChild(this.$cartTotalTitle)
-    this.$cartTotal.appendChild(this.$cartTotalPrice)
+    this.$cartContainer.appendChild(this.$cartHead);
+    this.$cartContainer.appendChild(this.$cartList);
+    this.$cartContainer.appendChild(this.$cartBtn);
 
-    this.$cartItemRow.appendChild(this.$cartItemCol)
-    this.$cartItemRow.appendChild(this.$price)
-    this.$cartItemRow.appendChild(this.$cartItemCol)
-    this.$cartItemCol.appendChild(this.$delItemBtn)
-
-    this.$cartTotal.appendChild(this.$cartTotalTitle)
-    this.$cartTotal.appendChild(this.$cartTotalPrice)
-
-    this.$cartItems.appendChild(this.$cartItemRow)
-    this.$cartItems.appendChild(this.$cartTotal)
-
-    this.$cartModal.appendChild(this.$cartHeader)
-    this.$cartModal.appendChild(this.$cartItems)
-
-    return this.$cartModal
-
+    return this.$cartContainer;
   }
 }
+
+// const app = document.getElementById("app");
+// const cart = new CartModal();
+
+// app.appendChild(cart.render());
+// {/* <div class="shopping-cart">
+//   <div class="shopping-cart-head">
+//     <span class="product-quantity">0</span> Product(s) in Cart
+//   </div>
+//   <ul class="shopping-cart-list"></ul>
+//   <div class="cart-buttons">
+//     <a href="#0" class="button empty-cart-btn">
+//       Huỷ order
+//     </a>
+//     <a href="#0" class="button cart-checkout">
+//       Thanh toán<span class="total-price">$0</span>
+//     </a>
+//   </div>
+// </div>; */}
+
+var ShoppingCart = function ($) {
+  "use strict";
+
+  // Cahce necesarry DOM Elements
+  var productsEl = document.querySelector(".product"),
+    cartEl = document.querySelector(".shopping-cart-list"),
+    productQuantityEl = document.querySelector(".product-quantity"),
+    emptyCartEl = document.querySelector(".empty-cart-btn"),
+    cartCheckoutEl = document.querySelector(".cart-checkout"),
+    totalPriceEl = document.querySelector(".total-price");
+
+  // Fake JSON data array here should be API call
+  var products = [
+      {
+        id: 0,
+        name: "iPhone 6S",
+        description:
+          "Kogi skateboard tattooed, whatever portland fingerstache coloring book mlkshk leggings flannel dreamcatcher.",
+        imageUrl: "http://www.icentar.me/phone/6s/images/goldbig.jpg",
+        price: 799,
+      },
+    ],
+    productsInCart = [];
+
+  // Pretty much self explanatory function. NOTE: Here I have used template strings (ES6 Feature)
+  var generateProductList = function () {
+    products.forEach(function (item) {
+      var productEl = document.createElement("div");
+      productEl.className = "product";
+      productEl.innerHTML = `<div class="product-image">
+                                <img src="${item.img}" alt="${item.name}">
+                             </div>
+                             <div class="product-name"><span>Product:</span> ${item.name}</div>
+                             <div class="product-price"><span>Price:</span> ${item.price} $</div>
+                             <div class="product-add-to-cart">
+                               <a href="#0" class="button see-more">More Details</a>
+                               <a href="#0" class="button add-to-cart" data-id=${item.name}>Add to Cart</a>
+                             </div>
+                          </div>
+`;
+
+      productsEl.appendChild(productEl);
+    });
+  };
+
+  // Like one before and I have also used ES6 template strings
+  var generateCartList = function () {
+    cartEl.innerHTML = "";
+
+    productsInCart.forEach(function (item) {
+      var li = document.createElement("li");
+      li.innerHTML = `${item.quantity} ${item.product.name} - $${
+        item.product.price * item.quantity
+      }`;
+      cartEl.appendChild(li);
+    });
+
+    productQuantityEl.innerHTML = productsInCart.length;
+
+    generateCartButtons();
+  };
+
+  // Function that generates Empty Cart and Checkout buttons based on condition that checks if productsInCart array is empty
+  var generateCartButtons = function () {
+    if (productsInCart.length > 0) {
+      emptyCartEl.style.display = "block";
+      cartCheckoutEl.style.display = "block";
+      totalPriceEl.innerHTML = "$ " + calculateTotalPrice();
+    } else {
+      emptyCartEl.style.display = "none";
+      cartCheckoutEl.style.display = "none";
+    }
+  };
+
+  // Setting up listeners for click event on all products and Empty Cart button as well
+  var setupListeners = function () {
+    productsEl.addEventListener("click", function (event) {
+      var el = event.target;
+      if (el.classList.contains("add-to-cart")) {
+        var elId = el.dataset.id;
+        addToCart(elId);
+      }
+    });
+
+    emptyCartEl.addEventListener("click", function (event) {
+      if (confirm("Bạn có chắc chắn muốn làm trống giỏ hàng?")) {
+        productsInCart = [];
+      }
+      generateCartList();
+    });
+  };
+
+  // Adds new items or updates existing one in productsInCart array
+  var addToCart = function (name) {
+    var obj = products[name];
+    if (productsInCart.length === 0 || productFound(obj.name) === undefined) {
+      productsInCart.push({ product: obj, quantity: 1 });
+    } else {
+      productsInCart.forEach(function (item) {
+        if (item.product.name === obj.name) {
+          item.quantity++;
+        }
+      });
+    }
+    generateCartList();
+  };
+
+  // This function checks if project is already in productsInCart array
+  var productFound = function (productName) {
+    return productsInCart.find(function (item) {
+      return item.product.name === productName;
+    });
+  };
+
+  var calculateTotalPrice = function () {
+    return productsInCart.reduce(function (total, item) {
+      return total + item.product.price * item.quantity;
+    }, 0);
+  };
+
+  // This functon starts the whole application
+  var init = function () {
+    generateProductList();
+    setupListeners();
+  };
+
+  // Exposes just init function to public, everything else is private
+  return {
+    init: init,
+  };
+
+  // I have included jQuery although I haven't used it
+};
+// (jQuery);
+
+// ShoppingCart.init();

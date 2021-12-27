@@ -2,7 +2,7 @@ import Header from "./components/Header.js";
 import Footer from "./components/Footer.js";
 import HomePage from "./components/HomePage.js";
 import Room from "./components/Room.js";
-import { guestroom, diningroom, bedroom } from "./components/ProductApi.js";
+import { guestroom, diningroom, bedroom, products } from "./components/ProductApi.js";
 import CartModal from './components/CartModal.js'
 
 
@@ -42,7 +42,7 @@ class Main {
             let html = new Room(item.img, item.name, item.price);
             this.$itemsContainer.appendChild(html.render());
         })
-        this.$itemsContainer.setAttribute("class", "w-{1024px} flex flex-wrap m-auto grid grid-cols-4");
+        this.$itemsContainer.setAttribute("class", "products w-{1024px} flex flex-wrap m-auto grid grid-cols-4");
     }
 
     onDiningroomClick = (e) => {
@@ -52,7 +52,7 @@ class Main {
             let html = new Room(item.img, item.name, item.price);
             this.$itemsContainer.appendChild(html.render());
         })
-        this.$itemsContainer.setAttribute("class", "w-{1024px} flex flex-wrap m-auto grid grid-cols-4");
+        this.$itemsContainer.setAttribute("class", "products w-{1024px} flex flex-wrap m-auto grid grid-cols-4");
     }
 
     onBedroomClick = (e) => {
@@ -62,7 +62,7 @@ class Main {
             let html = new Room(item.img, item.name, item.price);
             this.$itemsContainer.appendChild(html.render());
         })
-        this.$itemsContainer.setAttribute("class", "w-{1024px} flex flex-wrap m-auto grid grid-cols-4");
+        this.$itemsContainer.setAttribute("class", "products w-{1024px} flex flex-wrap m-auto grid grid-cols-4");
     }
 
     render() {
@@ -78,6 +78,7 @@ class Main {
     }
 }
 
+
 const app = document.getElementById("root");
 
 const main = new Main();
@@ -86,3 +87,4 @@ const cartmd =new CartModal()
 
 app.appendChild(main.render());
 app.appendChild(cartmd.render())
+

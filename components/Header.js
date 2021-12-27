@@ -1,6 +1,6 @@
 import ProductModal from "./ProductModal.js";
 
-// import CartModal from './components/CartModal.js'
+import CartModal from './CartModal.js'
 
 
 export default class Header {
@@ -20,7 +20,7 @@ export default class Header {
   $organizationEl;
   $contactEl;
   $cartEl;
-  // $cartModal
+  $cartModal
 
   constructor() {
     this.$mainContainer = document.createElement("div");
@@ -63,7 +63,7 @@ export default class Header {
 
     this.$logoEl = document.createElement("p");
     this.$logoEl.innerHTML = '<i class="fas fa-home"></i>';
-    this.$logoEl.setAttribute("class", "text-white text-2xl cursor-pointer");
+    this.$logoEl.setAttribute("class", "hover:scale-150 duration-300 text-white text-2xl cursor-pointer");
 
     this.$projectsEl = document.createElement("p");
     this.$projectsEl.textContent = "Dự án";
@@ -76,14 +76,14 @@ export default class Header {
     this.$priceListEl.textContent = "Bảng giá";
     this.$priceListEl.setAttribute(
       "class",
-      "text-white font-bold cursor-pointer"
+      "hover:scale-110 duration-300 text-white font-bold cursor-pointer"
     );
 
     this.$productsEl = document.createElement("p");
     this.$productsEl.textContent = "Sản phẩm";
     this.$productsEl.setAttribute(
       "class",
-      "text-white font-bold cursor-pointer"
+      "hover:scale-110 duration-300 text-white font-bold cursor-pointer"
     );
     this.$productsEl.addEventListener("mouseover", () => {
       this.$productModal.onHover();
@@ -99,35 +99,27 @@ export default class Header {
     this.$promotionEl.textContent = "Khuyến mãi";
     this.$promotionEl.setAttribute(
       "class",
-      "text-white font-bold cursor-pointer"
+      "hover:scale-110 duration-300 text-white font-bold cursor-pointer"
     );
 
     this.$newEl = document.createElement("p");
     this.$newEl.textContent = "Tin tức";
-    this.$newEl.setAttribute("class", "text-white font-bold cursor-pointer");
+    this.$newEl.setAttribute("class", "hover:scale-110 duration-300 text-white font-bold cursor-pointer");
 
     this.$organizationEl = document.createElement("p");
     this.$organizationEl.textContent = "Cơ cấu tổ chức";
     this.$organizationEl.setAttribute(
       "class",
-      "text-white font-bold cursor-pointer"
+      "hover:scale-110 duration-300 text-white font-bold cursor-pointer"
     );
 
     this.$contactEl = document.createElement("p");
     this.$contactEl.textContent = "Liên hệ";
     this.$contactEl.setAttribute(
       "class",
-      "text-white font-bold cursor-pointer"
+      "hover:scale-110 duration-300 text-white font-bold cursor-pointer"
     );
 
-    this.$cartEl = document.createElement("button");
-    this.$cartEl.type = "submit";
-    this.$cartEl.innerHTML =
-      "<img src='https://pngimg.com/uploads/shopping_cart/shopping_cart_PNG4.png' alt='yourimgtext' width='30' height='30' />";
-    this.$cartEl.setAttribute = ("class", "w-4 h-4");
-    this.$cartEl.addEventListener("submit", this.onSubmit)
-
-    // this.$cartModal = new CartModal()
   }
 
   // onBedroomClick = (e) => {
@@ -148,7 +140,6 @@ export default class Header {
     this.$tabarContainer.appendChild(this.$newEl);
     this.$tabarContainer.appendChild(this.$organizationEl);
     this.$tabarContainer.appendChild(this.$contactEl);
-    this.$tabarContainer.appendChild(this.$cartEl)
 
 
     this.$productModal.render(this.$productsEl);

@@ -164,3 +164,5 @@ export const bedroom = [
         price: "2,500,000.00đ",
     },
 ]
+
+export const products = homePageProducts.concat(guestroom,diningroom,bedroom)
