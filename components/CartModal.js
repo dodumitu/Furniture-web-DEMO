@@ -15,20 +15,21 @@ export default class CartModal {
     this.$cartContainer.setAttribute("class", " shopping-cart ");
 
     this.$cartHead = document.createElement("div");
-    this.$cartHead.setAttribute("class", " shopping-cart-head");
+    this.$cartHead.setAttribute("class", " shopping-cart-head flex");
 
     this.$productQuantity = document.createElement("span");
     this.$productQuantity.textContent = "0";
+    this.$productQuantity.setAttribute('class',"")
 
     this.$cartHead.innerHTML =
-    "<img src='https://pngimg.com/uploads/shopping_cart/shopping_cart_PNG4.png' alt='yourimgtext' width='30' height='30' />";
+    "<img src='https://pngimg.com/uploads/shopping_cart/shopping_cart_PNG4.png' alt='yourimgtext' width='30' height='30'' '/>";
 
 
     this.$cartList = document.createElement("ul");
     this.$cartList.setAttribute("class", "shopping-cart-list");
 
     this.$cartBtn = document.createElement("div");
-    this.$cartBtn.setAttribute("class", "cart-buttons flex-row justify-between");
+    this.$cartBtn.setAttribute("class", "cart-buttons ");
 
     this.$emptyCartBtn = document.createElement("a");
     this.$emptyCartBtn.href= "#0"
@@ -39,11 +40,12 @@ export default class CartModal {
     this.$checkoutBtn.href= "#0"
     this.$totalPrice = document.createElement("span");
     this.$totalPrice.textContent = "0đ";
-    this.$totalPrice.setAttribute("class", "total-price");
+    this.$totalPrice.setAttribute("class", "total-price ");
     this.$checkoutBtn.textContent =
       "Thanh toán- " + this.$totalPrice.textContent;
     this.$checkoutBtn.setAttribute("class", "button cart-checkout");
   }
+  
   render() {
     this.$cartHead.appendChild(this.$productQuantity);
 

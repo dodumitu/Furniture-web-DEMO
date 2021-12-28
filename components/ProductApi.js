@@ -45,42 +45,42 @@ export const guestroom = [
     {
         img: "https://nt11.mediawz.com/wp-content/uploads/2017/11/ban-an-600x600.jpg",
         name: "Bàn ăn gia đình",
-        price: "2,500,000.00đ",
+        price: "2500000",
     },
     {
         img: "https://nt11.mediawz.com/wp-content/uploads/2017/11/phong-khach-600x600.jpg",
         name: "Bàn khách chung cư",
-        price: "2,500,000.00đ",
+        price: "2500000",
     },
     {
         img: "https://nt11.mediawz.com/wp-content/uploads/2017/11/san-pham-4-600x600.jpg",
         name: "Bàn khách gia đình",
-        price: "2,500,000.00đ",
+        price: "2500000",
     },
     {
         img: "https://nt11.mediawz.com/wp-content/uploads/2017/11/san-pham-2-600x600.jpg",
         name: "Bàn trang điểm",
-        price: "2,500,000.00đ",
+        price: "2500000",
     },
     {
         img: "https://nt11.mediawz.com/wp-content/uploads/2017/10/img_5452-600x600.jpg",
         name: "Đồ gia dụng cho gia đình",
-        price: "2,500,000.00đ",
+        price: "2500000",
     },
     {
         img: "https://nt11.mediawz.com/wp-content/uploads/2017/11/san-pham-1-600x600.jpg",
         name: "Ghế sofa phòng khách",
-        price: "2,500,000.00đ",
+        price: "2500000",
     },
     {
         img: "https://nt11.mediawz.com/wp-content/uploads/2019/07/mau-nha-ve-sinh-nho-co-bon-tam-tuyet-dep-600x600.jpg",
         name: "Nhà vệ sinh",
-        price: "2,500,000.00đ",
+        price: "2500000",
     },
     {
         img: "https://nt11.mediawz.com/wp-content/uploads/2017/11/1-600x600.jpg",
         name: "Nội thất văn phòng 01",
-        price: "2,500,000.00đ",
+        price: "2500000",
     },
 ]
 
@@ -88,42 +88,42 @@ export const diningroom = [
     {
         img: "https://nt11.mediawz.com/wp-content/uploads/2017/11/ban-an-600x600.jpg",
         name: "Bàn ăn gia đình",
-        price: "2,500,000.00đ",
+        price: "2500000",
     },
     {
         img: "https://nt11.mediawz.com/wp-content/uploads/2017/11/phong-khach-600x600.jpg",
         name: "Bàn khách chung cư",
-        price: "2,500,000.00đ",
+        price: "2500000",
     },
     {
         img: "https://nt11.mediawz.com/wp-content/uploads/2017/11/san-pham-4-600x600.jpg",
         name: "Bàn khách gia đình",
-        price: "2,500,000.00đ",
+        price: "2500000",
     },
     {
         img: "https://nt11.mediawz.com/wp-content/uploads/2017/11/san-pham-2-600x600.jpg",
         name: "Bàn trang điểm",
-        price: "2,500,000.00đ",
+        price: "2500000",
     },
     {
         img: "https://nt11.mediawz.com/wp-content/uploads/2017/10/img_5452-600x600.jpg",
         name: "Đồ gia dụng cho gia đình",
-        price: "2,500,000.00đ",
+        price: "2500000",
     },
     {
         img: "https://nt11.mediawz.com/wp-content/uploads/2017/11/san-pham-1-600x600.jpg",
         name: "Ghế sofa phòng khách",
-        price: "2,500,000.00đ",
+        price: "2500000",
     },
     {
         img: "https://nt11.mediawz.com/wp-content/uploads/2019/07/mau-nha-ve-sinh-nho-co-bon-tam-tuyet-dep-600x600.jpg",
         name: "Nhà vệ sinh",
-        price: "2,500,000.00đ",
+        price: "2500000",
     },
     {
         img: "https://nt11.mediawz.com/wp-content/uploads/2017/11/1-600x600.jpg",
         name: "Nội thất văn phòng 01",
-        price: "2,500,000.00đ",
+        price: "2500000",
     },
 ]
 
@@ -131,37 +131,37 @@ export const bedroom = [
     {
         img: "https://nt11.mediawz.com/wp-content/uploads/2017/11/phong-khach-600x600.jpg",
         name: "Bàn khách chung cư",
-        price: "2,500,000.00đ",
+        price: "2500000",
     },
     {
         img: "https://nt11.mediawz.com/wp-content/uploads/2017/11/san-pham-4-600x600.jpg",
         name: "Bàn khách gia đình",
-        price: "2,500,000.00đ",
+        price: "2500000",
     },
     {
         img: "https://nt11.mediawz.com/wp-content/uploads/2017/11/san-pham-2-600x600.jpg",
         name: "Bàn trang điểm",
-        price: "2,500,000.00đ",
+        price: "2500000",
     },
     {
         img: "https://nt11.mediawz.com/wp-content/uploads/2017/10/img_5452-600x600.jpg",
         name: "Đồ gia dụng",
-        price: "2,500,000.00đ",
+        price: "2500000",
     },
     {
         img: "https://nt11.mediawz.com/wp-content/uploads/2017/11/san-pham-1-600x600.jpg",
         name: "Nhà vệ sinh",
-        price: "2,500,000.00đ",
+        price: "2500000",
     },
     {
         img: "https://nt11.mediawz.com/wp-content/uploads/2019/07/mau-nha-ve-sinh-nho-co-bon-tam-tuyet-dep-600x600.jpg",
         name: "Nội thất văn phòng",
-        price: "2,500,000.00đ",
+        price: "2500000",
     },
     {
         img: "https://nt11.mediawz.com/wp-content/uploads/2017/11/1-600x600.jpg",
         name: "Sofa",
-        price: "2,500,000.00đ",
+        price: "2500000",
     },
 ]
 
